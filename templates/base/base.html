@@ -10,10 +10,8 @@
                 <h1>Django CRUD</h1>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link btn btn-primary ml-3" href="#"> Listar</span></a>
-                        <a class="nav-link btn btn-secondary ml-3" href="#">Crear</a>
-                        <a class="nav-link btn btn-warning ml-3" href="#">Actualizar</a>
-                        <a class="nav-link btn btn-danger ml-3" href="#">Eliminar</a>
+                        <a class="nav-link btn btn-primary ml-3" href="{% url 'listar_usuarios' %}"> Listar</span></a>
+                        <a class="nav-link btn btn-secondary ml-3" href="{% url 'crear_usuario' %}">Crear</a>
                     </div>
                 </div>
             </nav>

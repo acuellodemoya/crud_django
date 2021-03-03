@@ -15,3 +15,13 @@ class UserCreate(CreateView):
     form_class = UserForm
     template_name = 'crear.html'
     success_url = reverse_lazy('index')
+
+class UserList(ListView):
+    model = User
+    template_name = 'listar.html'
+
+class UserUpdate(UpdateView):
+    model = User
+    form_class = UserForm
+    template_name = 'crear.html'
+    success_url = reverse_lazy('listar_usuarios')

@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %} Listar {% endblock %}
+
+{% block contenido %}
+    <table class="table">
+        <thead> 
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Celular</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for persona in object_list %}
+                <tr>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.apellido }}</td>
+                    <td>{{ persona.email }}</td>
+                    <td>{{ persona.numero_celular }}</td>
+                    <td> <a href="{% url 'modificar_usuarios' persona.id %}" class="btn btn-warning"> Editar</a> </td>
+                    <td> <a href="" class="btn btn-danger"> Elimnar</a> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
