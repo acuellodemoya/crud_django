@@ -20,7 +20,7 @@
                     <td>{{ persona.email }}</td>
                     <td>{{ persona.numero_celular }}</td>
                     <td> <a href="{% url 'modificar_usuarios' persona.id %}" class="btn btn-warning"> Editar</a> </td>
-                    <td> <a href="" class="btn btn-danger"> Elimnar</a> </td>
+                    <td> <a href="{% url 'eliminar_usuario' persona.id %}" class="btn btn-danger"> Elimnar</a> </td>
                 </tr>
             {% endfor %}
         </tbody>

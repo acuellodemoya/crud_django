@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from usuarios.views import index, UserCreate, UserList, UserUpdate
+from usuarios.views import index, UserCreate, UserList, UserUpdate, UserDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,5 @@ urlpatterns = [
     path('crear_usuario/', UserCreate.as_view(), name='crear_usuario'),
     path('listar_usuarios/', UserList.as_view(), name='listar_usuarios'),
     path('modificar_usuarios/<int:pk>', UserUpdate.as_view(), name='modificar_usuarios'),
+    path('eliminar_usuario/<int:pk>', UserDelete.as_view(), name='eliminar_usuario'),
 ]

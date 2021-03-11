@@ -24,4 +24,9 @@ class UserUpdate(UpdateView):
     model = User
     form_class = UserForm
     template_name = 'crear.html'
-    success_url = reverse_lazy('listar_usuarios')
+    success_url = reverse_lazy('listar')
+
+class UserDelete(DeleteView):
+    model = User
+    template_name = 'eliminar.html'
+    success_url = reverse_lazy('index')
